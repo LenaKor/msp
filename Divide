@@ -1,0 +1,78 @@
+namespace C1
+{
+    class Program
+    {
+
+
+        public interface IOperation
+        {
+          double variable_1 { get; set; }
+          double variable_2 { get; set; }
+            int opp_id { get; set; }
+            double result { get; set; }
+            float status { get; }
+
+          double data_validation();
+          
+        }
+
+
+
+        class Divide : IOperation
+        {
+            private readonly int my_opp_id;
+            private float current_status;
+
+            public Divide()
+            {
+                my_opp_id = 1; 
+                current_status = 0; 
+            }
+
+            public double result
+            {
+                get
+                {
+                    data_validation();
+                    retrun div(variable_1, variable_2);
+
+                }
+                result_validation_set()
+
+}
+        }
+        public double variable_1 { get; set; }
+        public double variable_2 { get; set; }
+
+        public int opp_id
+        {
+            get { return opp_id; }
+        }
+      public float status { get { return status; } set; }
+
+
+
+
+        private void data_validation()
+        {
+            if (Double.IsNaN(variable_1)
+                {
+                Console.WriteLine("First variable=0!!");
+                variable_1 = 0;
+
+            }
+
+            if (Double.IsNaN(variable_2))
+            {
+                Console.WriteLine("Second var 0");
+                variable_2 = 0;
+
+            }
+        }
+
+
+        private double div(double a, double b)
+        {
+           return a/b;
+        }
+    }
